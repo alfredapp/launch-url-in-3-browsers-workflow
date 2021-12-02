@@ -14,6 +14,8 @@ The Conditional Utility checks whether you've included https or http in your URL
 
 ## Download
 
+[Get the latest release.](https://github.com/alfredapp/launch-url-in-3-browsers-workflow/releases/latest/download/Launch.URL.in.3.Browsers.alfredworkflow)
+
 ## License
 
 3-Clause BSD
