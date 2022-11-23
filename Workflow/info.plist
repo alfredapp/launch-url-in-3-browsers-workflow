@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.alfredapp.launch3browsers</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>1F7CD585-9BB7-48C4-A922-23C1CACEB713</key>
@@ -119,12 +121,14 @@
 			<dict>
 				<key>browser</key>
 				<string>com.apple.Safari</string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
 				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
@@ -139,7 +143,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>3b</string>
+				<string>{var:browsers_keyword}</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
@@ -159,12 +163,14 @@
 			<dict>
 				<key>browser</key>
 				<string>com.google.Chrome</string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
 				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
@@ -203,6 +209,8 @@
 				</array>
 				<key>elselabel</key>
 				<string>else</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -254,12 +262,14 @@
 			<dict>
 				<key>browser</key>
 				<string>org.mozilla.firefox</string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
 				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
@@ -270,14 +280,11 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>When testing website changes, it's helpful to quickly check them in all main browsers. Using the keyword "3b" followed by a URL, you can quickly launch Safari, Chrome and Firefox to test your changes.
+	<string>## Usage
 
-Need to add or change browsers? Open an existing "Open URL" object and choose another browser from the dropdown, or connect a fourth one to add another.
+Speed up website testing by opening a URL in Safari, Google Chrome, and Mozilla Firefox via the Browsers Keyword (default: `3b`).
 
-The Conditional Utility checks whether you've included https or http in your URL, and adds it if necessary.
-
-Cheers,
-Vero</string>
+![Open alfredapp.com in three browsers](images/keyword.png)</string>
 	<key>uidata</key>
 	<dict>
 		<key>1F7CD585-9BB7-48C4-A922-23C1CACEB713</key>
@@ -287,9 +294,9 @@ Vero</string>
 			<key>note</key>
 			<string>The Conditional Utility works out whether your URL includes a URL handler (https or http), and adds it if it's not already included.</string>
 			<key>xpos</key>
-			<integer>235</integer>
+			<real>235</real>
 			<key>ypos</key>
-			<integer>265</integer>
+			<real>265</real>
 		</dict>
 		<key>1FA82D23-0412-435D-8C17-7453539A8982</key>
 		<dict>
@@ -298,9 +305,9 @@ Vero</string>
 			<key>note</key>
 			<string>Set to open in Google Chrome</string>
 			<key>xpos</key>
-			<integer>635</integer>
+			<real>635</real>
 			<key>ypos</key>
-			<integer>215</integer>
+			<real>215</real>
 		</dict>
 		<key>5EF0A5A7-B7A5-435F-8577-BDD9DDD27ABB</key>
 		<dict>
@@ -309,9 +316,9 @@ Vero</string>
 			<key>note</key>
 			<string>Set to open in Firefox. Any of these "Open URL" objects will appear without the small icon to the right if the browser is not found on your Mac.</string>
 			<key>xpos</key>
-			<integer>635</integer>
+			<real>635</real>
 			<key>ypos</key>
-			<integer>365</integer>
+			<real>365</real>
 		</dict>
 		<key>A16C7CE5-01DD-432A-B3D5-27BDEDF8F5D9</key>
 		<dict>
@@ -320,9 +327,9 @@ Vero</string>
 			<key>note</key>
 			<string>Add this object to an Alfred Remote page to trigger the workflow from your iOS device. It will use the macOS Clipboard content as the URL to launch.</string>
 			<key>xpos</key>
-			<integer>55</integer>
+			<real>55</real>
 			<key>ypos</key>
-			<integer>355</integer>
+			<real>355</real>
 		</dict>
 		<key>AF933A97-6EC6-422D-BD15-1AF532C24080</key>
 		<dict>
@@ -331,18 +338,18 @@ Vero</string>
 			<key>note</key>
 			<string>Set to open in Safari</string>
 			<key>xpos</key>
-			<integer>635</integer>
+			<real>635</real>
 			<key>ypos</key>
-			<integer>75</integer>
+			<real>75</real>
 		</dict>
 		<key>B9A84DF6-27E9-40F0-AA53-196FF72B96E9</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<integer>365</integer>
+			<real>365</real>
 			<key>ypos</key>
-			<integer>330</integer>
+			<real>330</real>
 		</dict>
 		<key>C50B748B-FDEB-42A2-ACD7-BC2C96B1EF77</key>
 		<dict>
@@ -351,24 +358,46 @@ Vero</string>
 			<key>note</key>
 			<string>Use keyword "3b" followed by the URL you want to launch in all browsers.</string>
 			<key>xpos</key>
-			<integer>55</integer>
+			<real>55</real>
 			<key>ypos</key>
-			<integer>130</integer>
+			<real>130</real>
 		</dict>
 		<key>D9071CF7-5F21-4A3B-95E8-255CA4BB204C</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>450</integer>
+			<real>450</real>
 			<key>ypos</key>
-			<integer>245</integer>
+			<real>245</real>
 		</dict>
 	</dict>
-	<key>variablesdontexport</key>
-	<array/>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>3b</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Browsers Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>browsers_keyword</string>
+		</dict>
+	</array>
 	<key>version</key>
-	<string>2021.2</string>
+	<string>2022.1</string>
 	<key>webaddress</key>
 	<string>https://www.alfredapp.com</string>
 </dict>
