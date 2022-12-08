@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.alfredapp.launch3browsers</string>
+	<string>com.alfredapp.vero.launch3browsers</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -397,7 +397,7 @@ Speed up website testing by opening a URL in Safari, Google Chrome, and Mozilla 
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2022.1</string>
+	<string>2022.2</string>
 	<key>webaddress</key>
 	<string>https://www.alfredapp.com</string>
 </dict>
